@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // method 1
+      var car = {
+        model: "ford",
+        year: "2009",
+        drive: function () {
+          console.log("driving");
+        },
+      };
+      var carmodel = car.model; //car.["model"]
+
+      for (let i in car) {
+        console.log(car[i]);
+      }
+
+      console.log(carmodel);
+      //method 2
+      var carnew = {};
+
+      carnew.model = "ford";
+      carnew.year = "2009";
+      // method 3
+
+      var car3rd = new Object();
+      car3rd.year = "2009";
+      car3rd.model = "Fiat";
+    </script>
+  </body>
+</html>

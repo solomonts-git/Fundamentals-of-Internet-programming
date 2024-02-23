@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="alert('Hello I am header')">
+    <h1 onclick="alert('Hello I am header')">Hello this is document</h1>
+    <script>
+      let name = "testname";
+
+      function hello() {
+        let res = confirm("Are you above 18?");
+
+        if (res) {
+          alert("You welcome");
+        } else {
+          alert("you are not allowed");
+        }
+        console.log("hello", name);
+      }
+      function sum() {
+        let a = Number(prompt("Eneter num1"));
+        let b = Number(prompt("Eneter num2"));
+
+        alert(a + b);
+      }
+      function getName() {
+        let res = prompt("What is you name?");
+        console.log(res);
+      }
+      sum();
+      //hello();
+    </script>
+    <button onclick="console.log(this)">Click Me</button>
+  </body>
+</html>

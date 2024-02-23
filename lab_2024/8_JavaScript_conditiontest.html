@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        In today's class we cover
+            1.  Revsion on variable declaration
+                using let, var, const
+            2.  Operator
+                arthmetic, strict equal, strict not equal, typeof,this
+            3. conditional expression
+                i.if, 
+                ii. if...else, 
+                iii.if...else if...else, switch
+            4. using loops
+                i. while loop
+                ii. do ...while loop
+                iii. for loop
+            5. array and array methods
+                i. array declaration 
+                    e.g let studentNames =["John", "Janny", "John"];
+                ii. using array methods(pop, push, shift, unshift)
+                    a. pop
+                       => used to get the last element of the array
+                       e.g.  let lastStudent = studentNames.pop();
+                        the result for the "lastStudent" is "John"
+                    b. push
+                        => used to add to the end of the array
+                          e.g.let res= studentNames.push("Abdu","Gebre");
+                          now the studentName contains five students and "abdu" and "Gebre"
+                          will be added to the end of array next to "Janny" since first we  pop it or (remove the last element using pop())
+                          // value of res= 5 , so push() return the length
+                    c. shift()
+                        => used to remove the first element in the array
+                        e.g let firstStudent= studentNames.shift();
+                        // the firstStudent is now "Jhon" removed from the array
+                        it is not good practice shift() since it shifts or rearrange the array index
+                    d. unshift()
+                        => used to add to the beggining of the array
+                        e.g let newStudent = studentNames.unshift("studnet one");
+                        // unshift returns newStudent length
+
+        */
+      function ArayTest() {
+        let names = ["Jone", "Jany", "test"];
+        console.log(names.join(" *"));
+        console.log(names.pop()); //we get "test"
+        console.log(names.length); // we get 2
+        console.log(names.push("test1", "test2")); // we get 4
+        console.log(names.length); // 4
+        let newName = names.unshift("test0"); // we get 4
+        console.log("new", newName); // new 4
+        console.log(names); //
+      }
+      ArayTest();
+      function conditionTest() {
+        for (let i = 0; i < 10; i++) {
+          let result = "";
+          for (let j = 0; j <= i; j++) {
+            result = result + "*";
+          }
+          console.log(result);
+        }
+      }
+      // self Invoking function- it can execute without calling
+      (function Calc1() {
+        let a = 5,
+          b = 6;
+        let sum = a + b;
+        console.log("Self-invoking sum=", sum);
+      })();
+
+      // regular function definition
+      function Calc(a, b) {
+        let a = 5,
+          b = 6;
+        let sum = a + b;
+        console.log("sum=", sum);
+      }
+      // calling a function
+      Calc(3, 5);
+      // calling a function
+      conditionTest();
+    </script>
+  </body>
+</html>

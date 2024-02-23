@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is heading one element</h1>
+    <p id="para1" style="color: blanchedalmond">This is the first paragrap</p>
+    <div>
+      <span class="spanclass">Hello this is span</span>
+      <span class="spanclass">Hello this is span 2</span>
+    </div>
+    <img
+      id="img"
+      src="education.png"
+      alt="education"
+      width="400"
+      height="300"
+    />
+    <button onclick="changeUsingDom()">Change value</button>
+    <script>
+      /*
+            The three main methods in DOM
+           1. getElementById(id of elemlet)
+           2. getElementsByClassName(class name of elemnt)
+           3. getElementsByTagName(tag name of elemnt)
+
+        */
+
+      function changeUsingDom() {
+        var x = document.getElementsByClassName("spanclass");
+
+        //change the content
+        x[0].innerHTML = "The first span changed with dom";
+
+        //change the attribute
+        document.getElementById("img").src = "capstone.jpeg";
+        document.getElementById("img").width = "500";
+
+        //change the style
+        document.getElementById("para1").style.color = "aqua";
+
+        //var y = document.getElementsByTagName("span");
+        //y[0].innerHTML = "Changed dyanamically";
+        // console.log(y[0].innerHTML);
+      }
+      //changeUsingDom();
+    </script>
+  </body>
+</html>
