@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Console Object</h1>
+    <h2>The table() Method</h2>
+    <p>Tip: Sort the table by clicking the column names.</p>
+
+    <p>Remember to open the console (Press F12) before you click "Run".</p>
+
+    <script>
+      // console.table(tabledata, tablecolumns)
+      // The table() method writes a table to the console.
+      // You can sort the table by clicking the column names.
+      console.table(["Audi", "Ferari", "Ford"]);
+
+      // Write an array of objects as a table in the console:
+      const car1 = { name: "Audi", model: "A4" };
+      const car2 = { name: "Volvo", model: "XC90" };
+      const car3 = { name: "Ford", model: "Fusion" };
+
+      console.table([car1, car2, car3]);
+
+      // Write an object as a table in the console:
+      console.table({ firstname: "John", lastname: "Doe" });
+    </script>
+  </body>
+</html>

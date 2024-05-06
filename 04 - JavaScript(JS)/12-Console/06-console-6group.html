@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Console Object</h1>
+    <h2>The group() Method</h2>
+    <p>Remember to open the console (Press F12) before you click "Run".</p>
+
+    <p>End a group by using the console.groupEnd() method.</p>
+
+    <script>
+      // The group() method starts a message group.
+
+      // All new messages will be written inside this group.
+      // End a group with console.groupEnd():
+
+      console.log("Hello world!");
+      console.group();
+      console.log("Hello again, this time inside a group!");
+      console.groupEnd();
+      console.log("and we are back.");
+    </script>
+  </body>
+</html>
